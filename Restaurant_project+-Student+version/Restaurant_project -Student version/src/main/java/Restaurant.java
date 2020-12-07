@@ -64,4 +64,21 @@ public class Restaurant {
                 +"Menu:"+"\n"+getMenu());
 
     }
+    public int showTotalPrice(List<Item>menu){
+    int totalPrice =0;
+    for(Item item: menu){
+        totalPrice+=item.getPrice();
+    }
+    return totalPrice;
+
+}
+private Item findItemByName(String itemName){
+    for (Item item: menu){
+        if (item.getName().equals(itemName))
+            return item;
+    }
+    return null;
+    }
+}
+
 
