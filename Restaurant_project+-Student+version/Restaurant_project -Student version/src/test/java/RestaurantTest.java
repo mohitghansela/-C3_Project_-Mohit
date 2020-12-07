@@ -81,26 +81,4 @@ class RestaurantTest {
                 ()->restaurant.removeFromMenu("French fries"));
     }
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-    // calculate total amount of selected items //
-   @Test
-      public void adding_item_to_menu_should_display_total_price(){
-        restaurant.addToMenu(name "sweet corn soup",price 119);
-       restaurant.addToMenu(name "vegetable lasgane",price 269);
-       List<Item> menu = restaurant.getMenu();
-       int actualTotalPrice = restaurant.showTotalPrice(menu);
-       assertEquals(totalPrice,actualTotalPrice);
-    }
-    @Test
-    public void adding_no_item_to_menu_should_display_total_price_as_0(){
-        List<Item> menu = restaurant.getMenu();
-        int totalPrice = 0;
-        int actualTotalPrice =restaurant.showTotalPrice(menu);
-        assertEquals(totalPrice,actualTotalPrice);
-    }
-    @Test
-    public void removing_an_item_from_menu_should_display_updated_price() throws itemNotFoundException {
-        restaurant.addToMenu(name "sweet corn soup",price 119);
-        restaurant.addToMenu(name "vegetable lasgane",price 269);
-        List<Item>menu = restaurant.getMenu();
-    }
-}
+
